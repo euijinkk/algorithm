@@ -17,7 +17,7 @@ function 몫(num, 나누는수) {
   return Math.floor(num / 나누는수);
 }
 
-/**CcC
+/**
  * 풀이 시간 : 17:20 ~ 17:32
  *
  * 풀이 과정 :
