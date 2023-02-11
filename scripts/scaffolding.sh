@@ -9,7 +9,7 @@ fi
 
 touch "$filename.js"
 echo "/**" >>"$filename".js
-echo " * 풀이 시간 : 15:03" >>"$filename".js
+echo " * 풀이 시간 : " >>"$filename".js
 echo " *" >>"$filename".js
 echo " * 풀이 과정 :" >>"$filename".js
 echo " *" >>"$filename".js
