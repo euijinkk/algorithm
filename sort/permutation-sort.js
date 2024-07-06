@@ -1,3 +1,4 @@
+// https://github.com/euijinkk/algorithm/blob/main/permutation/README.md
 function permute(arr, _k) {
   const k = _k ?? arr.length;
   const result = [];
