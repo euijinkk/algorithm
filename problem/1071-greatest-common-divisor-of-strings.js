@@ -33,11 +33,12 @@ function getStringDivisors(str) {
 }
 
 function getNumberDivisors(num) {
-  const res = [];
-  for (let i = 1; i <= num; i++) {
-    if (num / i === Math.round(num / i)) {
-      res.push(i);
+  const res = new Set();
+  for (let i = 1; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) {
+      res.add(i);
+      res.add(num / i);
     }
   }
-  return res;
+  return Array.from(res).sort((a, b) => a - b);
 }
