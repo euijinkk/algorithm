@@ -33,4 +33,6 @@ function moveZeroes2(nums) {
       i++;
     }
   }
+
+  return nums;
 }
