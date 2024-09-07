@@ -1,3 +1,6 @@
+/**
+ * O(2n)
+ */
 function moveZeroes(nums) {
   const nonZeroIndexes = [];
 
@@ -16,4 +19,18 @@ function moveZeroes(nums) {
   }
 
   return nums;
+}
+
+/**
+ * O(n)
+ */
+function moveZeroes2(nums) {
+  let i = 0; // Pointer to track the position of the next non-zero element
+
+  for (let j = 0; j < nums.length; j++) {
+    if (nums[j] !== 0) {
+      [nums[i], nums[j]] = [nums[j], nums[i]]; // Swap using array destructuring
+      i++;
+    }
+  }
 }
