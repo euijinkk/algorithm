@@ -18,29 +18,42 @@
  * 이 문제풀이의 단점 : greedy 같은 brute-force 라서 시간이 오래 걸린다. 2500ms
  */
 function maxArea(heights) {
+  // declare a variable 'max' to store the maximum area found
   let max = 0;
+
+  // Sort heights from largest to smallest to prioritize larger values
+  // I believe the biggest has high probability of being the answer
+  // I believe the biggest is more likely to be the answer
   const sortedHeights = [...heights].sort((a, b) => b - a);
+  // declare max x axis length
   const maxX = heights.length - 1;
 
+  // Loop through the sorted heights (from largest to smallest)
   for (height of sortedHeights) {
+    // For the same height values, the biggest and smallest values can both be candidates for answer
     const firstIndex = heights.indexOf(height);
     const lastIndex = heights.lastIndexOf(height);
-
-    const indexes =
+    const indices =
       firstIndex === lastIndex ? [firstIndex] : [firstIndex, lastIndex];
 
-    for (const index of indexes) {
+    // Loop through the candidate indices
+    for (const index of indices) {
       const v = heights[index];
       for (let i = 0; i < heights.length; i++) {
+        // calculate the x-axis distance (width)
         const x = Math.abs(index - i);
+        // calculate the y-axis distance (height) using the smaller value between the two heights
         const y = Math.min(v, heights[i]);
+        // calculate the area
         const area = x * y;
 
+        // If new area is greater than the current max, update max
         if (area > max) {
           max = area;
         }
 
         const maxY = height;
+        // if maximum posibble area is less than or equal to the current max, exit the function
         if (maxX * maxY <= max) {
           return max;
         }
