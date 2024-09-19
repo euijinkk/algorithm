@@ -1,10 +1,10 @@
 /**
- * 1. 설명하면서 문제 풀기
- * 2. 알고리즘 전략 분석 (시간복잡도, 공간복잡도, 자료구조, 방법론)
- *  - 시간복잡도 :
- *  - 공간복잡도 :
- *  - 자료구조 :
- * 3. 알고리즘 개선하기
+ * 1. Solving
+ * 2. Algorithm anaysis
+ *  - Time Complexity :
+ *  - Space Complexity :
+ *  - Data structure :
+ * 3. Improve algorithm
  */
 
 const vowels = new Set(["a", "e", "i", "o", "u"]);
